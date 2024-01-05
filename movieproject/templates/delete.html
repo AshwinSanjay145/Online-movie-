@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title%}
+<title> Delete Movie  </title>
+{% endblock %}
+{% block content %}
+
+<form class="editform" method="POST" >
+    {% csrf_token %}
+    <h3 class="text-black">Are you sure want to Remove this <b>{{movie.name}} {{movie.year}}</b> from the list  ?</h3>
+    <button type="submit" class="btn btn-danger">Remove</button>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title%}
+<title> Update Movie  </title>
+{% endblock %}
+{% block content %}
+<div class="container">
+
+    <div class="row">
+
+        <div class="col md-12">
+            <div class="editform">
+                <h4 class="text-black text-center "> Update Movie</h4>
+                <br>
+        <form  method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-success">Update</button>
+        </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+{% endblock %}

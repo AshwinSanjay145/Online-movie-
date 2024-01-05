@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title%}
+<title> Add Movie </title>
+{% endblock %}
+
+{% block content %}
+<form class="editform" method="post" enctype="multipart/form-data">
+  <h4 class="text-black text-center "> Add Movie</h4><br>
+  {% csrf_token %}
+  <input type="text" class="form-control" name="name" placeholder="Enter Movie name"><br><br>
+  <input type="text" class="form-control" name="cate" placeholder="Enter Movie Category"><br><br>
+  <textarea type="text" class="form-control"name="desc" placeholder="Enter Movie desc"></textarea><br><br>
+  <input type="text" class="form-control" name="year" placeholder="Enter Movie year"><br><br>
+  <input type="file" name="img" ><br><br>
+  <button type="submit" class="btn btn-success">Add</button>
+
+</form>
+{% endblock %}
